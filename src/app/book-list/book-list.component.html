@@ -1,7 +1,14 @@
-<div>
-  <div *ngFor="let d of result">
-    <p>AutrhorID {{d.authorId}}</p>
-    <p>author {{d.author}}</p>
+  <div class="container">
+    <div class="row">
+      <ng-container *ngFor="let book of result">
+        <div class="col-md-4 text-center">
+          <div class="well">
+        <span class="glyphicon book-icon glyphicon-book" aria-hidden="true"></span><br>
+        <a>{{book.author}}</a><br>
+        <a>{{book.title}}</a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
   </div>
-</div>
 

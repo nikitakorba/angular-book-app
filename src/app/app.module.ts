@@ -8,6 +8,7 @@ import {CollapseModule} from 'ngx-bootstrap';
 import { AuthorListComponent } from './author-list/author-list.component';
 import {GetDataService} from './get-data.service';
 import {HttpModule} from '@angular/http';
+import { HomeComponentComponent } from './home-component/home-component.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {HttpModule} from '@angular/http';
     NavBarComponent,
     BookListComponent,
     AuthorListComponent,
+    HomeComponentComponent,
   ],
   imports: [
     BrowserModule,
