@@ -1,3 +1,18 @@
-<p>
-  author-list works!
-</p>
+<div class="container">
+  <h1>Список авторов</h1>
+  <div class="row">
+    <ng-container *ngFor="let author of authorInfo">
+      <div class="col-md-4 text-center">
+        <div class="well">
+          <a class="author-name">{{author.name}}</a>
+          <p>{{author.biography}}</p>
+          <p>Книги:</p>
+          <ul *ngFor="let book of author.books">
+            <li><a>{{book.title}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<!--прокручивать книги двойным нгФором-->
