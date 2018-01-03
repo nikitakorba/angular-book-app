@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GetDataService} from '../get-data.service';
 
 @Component({
   selector: 'app-book-list',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-
-  constructor() { }
+  data;
+  result: Array<Object>;
+  constructor(private getData: GetDataService) {
+  }
 
   ngOnInit() {
+    this.data = this.getData.getBooks().subscribe(val => this.result = val);
   }
 
 }

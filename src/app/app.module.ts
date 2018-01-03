@@ -6,20 +6,23 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BookListComponent } from './book-list/book-list.component';
 import {CollapseModule} from 'ngx-bootstrap';
 import { AuthorListComponent } from './author-list/author-list.component';
+import {GetDataService} from './get-data.service';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     BookListComponent,
-    AuthorListComponent
+    AuthorListComponent,
   ],
   imports: [
     BrowserModule,
     appRouting,
-    CollapseModule
+    CollapseModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [GetDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
