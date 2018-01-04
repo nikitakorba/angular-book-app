@@ -4,11 +4,10 @@
     <ng-container *ngFor="let author of authorInfo">
       <div class="col-md-12 text-center">
         <div class="well">
-          <a class="author-name">{{author.name}}</a>
-          <p>{{author.biography}}</p>
+          <a class="author-name" [routerLink]="['/authorlist',author.id]">{{author.name}}</a>
           <p>Книги:</p>
           <ul class="text-left" *ngFor="let book of author.books">
-            <li><a>{{book.title}}</a></li>
+            <li><a [routerLink]="['/booklist',book.id]">{{book.title}}</a></li>
           </ul>
         </div>
       </div>

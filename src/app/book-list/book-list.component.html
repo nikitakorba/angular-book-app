@@ -5,8 +5,8 @@
         <div class="col-md-4 text-center">
           <div class="well">
         <span class="glyphicon book-icon glyphicon-book" aria-hidden="true"></span><br>
-        <a>{{book.author}}</a><br>
-        <a>{{book.title}}</a>
+        <a [routerLink]="['/authorlist',book.authorId]" >{{book.author}}</a><br>
+        <a [routerLink]="['/booklist',book.id]">{{book.title}}</a>
           </div>
         </div>
       </ng-container>

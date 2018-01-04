@@ -9,6 +9,9 @@ import { AuthorListComponent } from './author-list/author-list.component';
 import {GetDataService} from './get-data.service';
 import {HttpModule} from '@angular/http';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { AuthorDetailsComponent } from './author-details/author-details.component';
+import { CategoryDetailsComponent } from './category-details/category-details.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { HomeComponentComponent } from './home-component/home-component.componen
     BookListComponent,
     AuthorListComponent,
     HomeComponentComponent,
+    BookDetailsComponent,
+    AuthorDetailsComponent,
+    CategoryDetailsComponent,
   ],
   imports: [
     BrowserModule,

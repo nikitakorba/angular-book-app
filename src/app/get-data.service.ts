@@ -9,14 +9,22 @@ export class GetDataService {
     const apiUrl = './assets/books.json';
     return this.http.get(apiUrl)
       .map( (response: Response) => {
-        const data = response.json();
-        return data; } );
+        return response.json(); } );
   }
   getAuthors() {
     const apiUrl = './assets/authors.json';
     return this.http.get(apiUrl)
       .map( (response: Response) => {
-        const data = response.json();
-        return data; } );
+        return response.json(); } );
+  }
+  getBookById(id) {
+    const apiUrl = './assets/books.json';
+    return this.http.get(apiUrl)
+      .map(res => res.json().find(book => book.id === id));
+  }
+  getAuthorById(id) {
+    const apiUrl = './assets/authors.json';
+    return this.http.get(apiUrl)
+      .map(res => res.json().find(author => author.id === id));
   }
   }

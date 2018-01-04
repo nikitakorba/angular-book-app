@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div *ngIf="authorInfo" class="col-md-12">
+      <h1>{{authorInfo.name}}</h1>
+      <p>{{authorInfo.biography}}</p>
+      <h3>Список книг</h3>
+      <ul *ngFor="let book of authorInfo.books">
+        <li><a [routerLink]="['/booklist',book.id]"> {{book.title}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
