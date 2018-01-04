@@ -12,7 +12,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { AuthorDetailsComponent } from './author-details/author-details.component';
 import { CategoryDetailsComponent } from './category-details/category-details.component';
-
+import { BsDropdownModule } from 'ngx-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { CategoryDetailsComponent } from './category-details/category-details.co
     BrowserModule,
     appRouting,
     CollapseModule,
-    HttpModule
+    HttpModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [GetDataService],
   bootstrap: [AppComponent]

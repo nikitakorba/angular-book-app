@@ -13,7 +13,6 @@ export class AuthorListComponent implements OnInit {
   ngOnInit() {
     this.getData.getAuthors().subscribe(val => {
       this.authorInfo = val;
-      console.log(this.authorInfo);
     });
 
   }

@@ -1,17 +1,37 @@
+<!--<div class="container">-->
+<!--<h1>Список авторов</h1>-->
+<!--<div class="row row-eq-height">-->
+<!--<ng-container *ngFor="let author of authorInfo">-->
+<!--<div class="col-md-12 text-center">-->
+<!--<div class="well">-->
+<!--<a class="author-name" [routerLink]="['/authorlist',author.id]">{{author.name}}</a>-->
+<!--<p>Книги:</p>-->
+<!--<ul class="text-left" *ngFor="let book of author.books">-->
+<!--<li><a [routerLink]="['/booklist',book.id]">{{book.title}}</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</ng-container>-->
+<!--</div>-->
+<!--</div>-->
 <div class="container">
-  <h1>Список авторов</h1>
-  <div class="row row-eq-height">
+  <div class="row">
+    <h1 class="text-center space-bot">Список авторов</h1>
     <ng-container *ngFor="let author of authorInfo">
-      <div class="col-md-12 text-center">
-        <div class="well">
-          <a class="author-name" [routerLink]="['/authorlist',author.id]">{{author.name}}</a>
-          <p>Книги:</p>
-          <ul class="text-left" *ngFor="let book of author.books">
-            <li><a [routerLink]="['/booklist',book.id]">{{book.title}}</a></li>
+      <div class="col-md-4">
+        <div class="btn-group btn-block btn-group-lg space-bot" dropdown>
+          <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+            {{author.name}} <span class="caret"></span>
+          </button>
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li role="menuitem"><a class="dropdown-item" [routerLink]="['/authorlist',author.id]">Перейти к профилю</a></li>
+            <li class="divider dropdown-divider"></li>
+            <ng-container *ngFor="let book of author.books">
+              <li role="menuitem"><a [routerLink]="['/booklist',book.id]" class="dropdown-item">{{book.title}}</a></li>
+            </ng-container>
           </ul>
         </div>
       </div>
     </ng-container>
   </div>
 </div>
-
