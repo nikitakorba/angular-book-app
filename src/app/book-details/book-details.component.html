@@ -3,7 +3,7 @@
     <div *ngIf="bookInfo" class="col-md-6">
       <h1>{{bookInfo.title}}</h1>
       <a class="book-author" [routerLink]="['/authorlist',bookInfo.authorId]">{{bookInfo.author}}</a><br>
-      <a class="book-category" [routerLink]="['/categorylist',bookInfo.categoryId]">{{bookInfo.category}}</a>
+      <a class="book-category" [routerLink]="['/categoryinfo',bookInfo.categoryId]">{{bookInfo.category}}</a>
       <p>{{bookInfo.description}}</p>
     </div>
     <div class="col-md-6 text-center">

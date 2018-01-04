@@ -5,6 +5,7 @@ import {AuthorListComponent} from './author-list/author-list.component';
 import {HomeComponentComponent} from './home-component/home-component.component';
 import {BookDetailsComponent} from './book-details/book-details.component';
 import {AuthorDetailsComponent} from './author-details/author-details.component';
+import {CategoryDetailsComponent} from './category-details/category-details.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponentComponent},
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
   {path: 'authorlist', children: [
     {path: '', component: AuthorListComponent},
     {path: ':id', component: AuthorDetailsComponent}
-  ]}
+  ]},
+  {path: 'categoryinfo/:id', component: CategoryDetailsComponent}
 ];
 
 export  const appRouting: ModuleWithProviders = RouterModule.forRoot(appRoutes);

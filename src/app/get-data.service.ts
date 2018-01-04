@@ -27,4 +27,9 @@ export class GetDataService {
     return this.http.get(apiUrl)
       .map(res => res.json().find(author => author.id === id));
   }
+  getCategoryById(id) {
+    const apiUrl = './assets/books.json';
+    return this.http.get(apiUrl)
+      .map(res => res.json().filter(book => book.categoryId === id));
+  }
   }
